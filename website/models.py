@@ -10,11 +10,7 @@ class Drinks(models.Model):
     price = models.IntegerField()
     category_id = models.ForeignKey(DrinksCategory, on_delete=models.PROTECT, default=None)
 
-"""SHIFT = (
-    ("1", "Morning"),
-    ("2", "Afernoon"),
-    ("3", "Evening"),
-)"""
+
 class Logger(models.Model):
     first_name = models.CharField(max_length= 200)
     last_name = models.CharField(max_length=200)
