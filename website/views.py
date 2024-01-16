@@ -2,7 +2,7 @@ from http.client import HTTPResponse
 from django.shortcuts import render
 from django.http import HttpResponse
 from website.forms import LogForm, BookingForm
-# Create your views here.
+
 
 def form_view(request):
     form = LogForm()
