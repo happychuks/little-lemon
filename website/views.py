@@ -1,8 +1,26 @@
 from http.client import HTTPResponse
 from django.shortcuts import render
 from django.http import HttpResponse
-
+from website.forms import LogForm, BookingForm
 # Create your views here.
+
+def form_view(request):
+    form = LogForm()
+    if request.method == 'POST':
+        form = LogForm(request.POST)
+        if form.is_valid():
+            form.save()
+    context = {"form": form}
+    return render(request,"home.html",context)
+
+def booking_form_view(request):
+     form = BookingForm()
+     if request.method == 'POST':
+         form = BookingForm(request.POST)
+         if form.is_valid():
+            form.save()
+     context = {"form" : form}
+     return render(request, "booking.html", context)
 
 def drinks(request, drink_name):
     drink = {
@@ -23,5 +41,3 @@ def about(request):
 def menu(request):
     return HttpResponse("Menu for Little Lemon")
 
-def book(request):
-    return HttpResponse("Make a booking")

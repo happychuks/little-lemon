@@ -2,7 +2,8 @@
 
 This is my second Django framework web development project.
 
-You can clone this repository using the following command:
+Feel free to contribute to or copy this project:
+You can clone it using the following command:
 ```git clone https://github.com/happychuks/little-lemon.git```
 
 - change directory into the parent directory of the repository
