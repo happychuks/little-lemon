@@ -3,6 +3,8 @@
 This is my second Django framework web development project.
 
 Feel free to contribute to or copy this project:
+
+How to contribute: 
 You can clone it using the following command:
 ```git clone https://github.com/happychuks/little-lemon.git```
 
