@@ -29,3 +29,5 @@ python3 manage.py migrate  # To migrate the changes in Database
 python3 manage.py shell # To run interactive shell and run some sql commands
 ```
 
+Thank you for your time.
+
