@@ -26,3 +26,8 @@ python3 manage.py migrate  # To migrate the changes in Database
 python3 manage.py shell # To run interactive shell
 ```
 
+### To create admin profile using the following command:
+```bash
+python3 manage.py createsuperuser
+# Enter necessary credentials
+```
