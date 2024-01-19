@@ -2,6 +2,7 @@ from http.client import HTTPResponse
 from django.shortcuts import render
 from django.http import HttpResponse
 from website.forms import LogForm, BookingForm
+from django.template import loader
 
 
 def form_view(request):
@@ -33,8 +34,9 @@ def drinks(request, drink_name):
 
 
 def home(request):
-    name = "World!"
-    return HttpResponse("<h1>Hello {}, Welcome to Little Lemon !</h1>".format(name))
+    template = loader.get_template("home.html")
+    context = {}
+    return HttpResponse(template.render(context, request))
 
 def about(request):
     return HttpResponse("About us")
