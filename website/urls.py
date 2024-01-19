@@ -3,6 +3,7 @@ from . import views
 
 app_name = "website"
 
+# Also called url router
 urlpatterns = [
     path('', views.home, name="home"),
     path('form/', views.form_view, name="form"),
