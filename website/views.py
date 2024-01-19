@@ -33,7 +33,8 @@ def drinks(request, drink_name):
 
 
 def home(request):
-    return HttpResponse("Welcome to Little Lemon !")
+    name = "World!"
+    return HttpResponse("<h1>Hello {}, Welcome to Little Lemon !</h1>".format(name))
 
 def about(request):
     return HttpResponse("About us")
