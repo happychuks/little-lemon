@@ -34,9 +34,7 @@ def drinks(request, drink_name):
 
 
 def home(request):
-    template = loader.get_template("home.html")
-    context = {}
-    return HttpResponse(template.render(context, request))
+    return render(request, 'hello.html', {}) # follows the DRY convention
 
 def about(request):
     return HttpResponse("About us")
