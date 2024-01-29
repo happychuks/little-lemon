@@ -25,8 +25,8 @@ def booking_form_view(request):
 
 def drinks(request, drink_name):
     drink = {
-        'mocha' : 'type of coffee',
-        'tea' : 'type of hot beverage',
+        'mocha' : 'this is a type of coffee',
+        'tea' : 'this is a type of hot beverage',
         'lemonade': 'type of refreshment'
     }
     choice_of_drink = drink[drink_name]
