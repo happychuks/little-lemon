@@ -27,7 +27,7 @@ def drinks(request, drink_name):
     drink = {
         'mocha' : 'this is a type of coffee',
         'tea' : 'this is a type of hot beverage',
-        'lemonade': 'type of refreshment'
+        'lemonade': 'this is a type of refreshment'
     }
     choice_of_drink = drink[drink_name]
     return HttpResponse(f"<h2>{drink_name}</h2> " + choice_of_drink)
@@ -37,8 +37,8 @@ def home(request):
     return render(request, 'hello.html', {}) # follows the DRY convention
 
 def about(request):
-    return HttpResponse("About us")
+    return HttpResponse("About Us")
 
 def menu(request):
-    return HttpResponse("Menu for Little Lemon")
+    return HttpResponse("Menu for Little-Lemon")
 
