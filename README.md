@@ -1,5 +1,5 @@
 # Little-Lemon website
-
+A mini restaurant website for local meals
 This is my second Django framework web development project.
 
 Feel free to contribute to or copy this project:
