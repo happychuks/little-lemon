@@ -3,6 +3,7 @@ from django.shortcuts import render
 from django.http import HttpResponse
 from website.forms import LogForm, BookingForm
 from django.template import loader
+from .models import Menu
 
 
 def form_view(request):
@@ -40,7 +41,18 @@ def about(request):
     about_content = {'about': "Little Lemon is a family-owned Mediterranean restaurant, focused on traditional recipes served with a modern twist. The chefs draw inspiration from Italian, Greek, and Turkish culture and have a menu of 12–15 items that they rotate seasonally. The restaurant has a rustic and relaxed atmosphere with moderate prices, making it a popular place for a meal any time of the day."} 
     return render(request, "about.html", {'content': about_content})
 
-def menu(request):
-    our_menu = {'menu': "We have traditional recipes served with a modern twist. The chefs draw inspiration from Italian, Greek, and Turkish culture and have a menu of 12–15 items that they rotate seasonally. The restaurant has a rustic and relaxed atmosphere with moderate prices, making it a popular place for a meal any time of the day."} 
-    return render(request, "menu.html", {'content': our_menu})
+""" def menu(request):
+    our_menu = {'pricechart': [
+        {'name': "falfel", 'price': "10"},
+        {'name': "french toast", 'price': "15"},
+        {'name': "shawarma", 'price': "12"},
+        {'name': "burritos", 'price': "5"},
+        {'name': "hamburger", 'price': "7.5"},
+    ]}
+    return render(request, "menu.html", our_menu) """
+
+def menu_by_id(request):
+    newmenu = Menu.objects.all()
+    newmenu_dict = {'menu' : newmenu}
+    return render(request, "menu.html", newmenu_dict)
 
